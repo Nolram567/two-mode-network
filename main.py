@@ -1,16 +1,24 @@
-# This is a sample Python script.
+import csv
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    import csv
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # Daten für das CSV-Dokument
+    data = [
+        ['Name', 'Alter', 'Beruf'],
+        ['Alice', 25, 'Ingenieur'],
+        ['Bob', 30, 'Lehrer'],
+        ['Charlie', 22, 'Student'],
+        ['David', 35, 'Arzt']
+    ]
+
+    # Name der CSV-Datei
+    csv_file_path = 'beispiel.csv'
+
+    # CSV-Datei schreiben
+    with open(csv_file_path, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(data)
+
+    print(f'Das CSV-Dokument wurde erfolgreich erstellt: {csv_file_path}')
+

@@ -55,8 +55,8 @@ if __name__ == '__main__':
     G = nx.bipartite.projected_graph(G, list(G.nodes)[0:10:None])
 
     print(f"degree centrality : {centrality.degree_centrality(G)}\n")
-    print(f"betweenness centraility : {centrality.betweenness_centrality(G)}\n")
-    print(f"betweenness centraility : {centrality.closeness_centrality(G)}\n")
+    print(f"betweenness centrality : {centrality.betweenness_centrality(G)}\n")
+    print(f"closeness centrality : {centrality.closeness_centrality(G)}\n")
 
     # Zeige den unipartiten Graphen
     nx.draw(G, with_labels=True, font_weight='bold', node_color='skyblue')
@@ -84,8 +84,8 @@ if __name__ == '__main__':
     nx.draw(G_unimodal, pos, with_labels=True, font_weight='bold', node_size=700)
 
     print(f"degree centrality : {centrality.degree_centrality(G_unimodal)}\n")
-    print(f"betweenness centraility : {centrality.betweenness_centrality(G_unimodal)}\n")
-    print(f"betweenness centraility : {centrality.closeness_centrality(G_unimodal)}\n")
+    print(f"betweenness centrality : {centrality.betweenness_centrality(G_unimodal)}\n")
+    print(f"closeness centrality : {centrality.closeness_centrality(G_unimodal)}\n")
 
     plt.show()
 
